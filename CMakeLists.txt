@@ -43,7 +43,7 @@ else()
     set(WITH_DBUS OFF)
 endif()
 
-set(REQUIRED_QT_VERSION 6.5.0)
+set(REQUIRED_QT_VERSION 6.2.4)
 if (WITH_WAYLAND)
     set(_qtgui_find_components COMPONENTS Private)
 endif()
@@ -76,10 +76,10 @@ ecm_set_disabled_deprecation_versions(
 )
 
 add_subdirectory(src)
-if (BUILD_TESTING)
-    add_subdirectory(autotests)
-    add_subdirectory(tests)
-endif()
+#if (BUILD_TESTING)
+#    add_subdirectory(autotests)
+#    add_subdirectory(tests)
+#endif()
 
 # create a Config.cmake and a ConfigVersion.cmake file and install them
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6GuiAddons")

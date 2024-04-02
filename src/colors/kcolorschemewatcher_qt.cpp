@@ -10,19 +10,19 @@
 
 KColorSchemeWatcherQt::KColorSchemeWatcherQt()
 {
-    connect(QGuiApplication::styleHints(), &QStyleHints::colorSchemeChanged, this, &KColorSchemeWatcherBackend::systemPreferenceChanged);
+    // connect(QGuiApplication::styleHints(), &QStyleHints::colorSchemeChanged, this, &KColorSchemeWatcherBackend::systemPreferenceChanged);
 }
 
 KColorSchemeWatcher::ColorPreference KColorSchemeWatcherQt::systemPreference() const
 {
-    switch (QGuiApplication::styleHints()->colorScheme()) {
-    case Qt::ColorScheme::Unknown:
-        return KColorSchemeWatcher::NoPreference;
-    case Qt::ColorScheme::Light:
-        return KColorSchemeWatcher::PreferLight;
-    case Qt::ColorScheme::Dark:
-        return KColorSchemeWatcher::PreferDark;
-    }
+    // switch (QGuiApplication::styleHints()->colorScheme()) {
+    // case Qt::ColorScheme::Unknown:
+    //     return KColorSchemeWatcher::NoPreference;
+    // case Qt::ColorScheme::Light:
+    //     return KColorSchemeWatcher::PreferLight;
+    // case Qt::ColorScheme::Dark:
+    //     return KColorSchemeWatcher::PreferDark;
+    // }
     return KColorSchemeWatcher::NoPreference;
 }
 
